@@ -7,6 +7,11 @@ class C_master extends CI_Controller {
 	{
 
 	}
+
+	public function pegawai($value='')
+	{
+		# code...
+	}
  
 
 }

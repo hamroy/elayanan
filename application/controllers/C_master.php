@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class login_proses extends CI_Controller {
+class C_master extends CI_Controller {
 	public function index()
 	{
 

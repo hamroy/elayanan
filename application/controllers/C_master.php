@@ -12,6 +12,11 @@ class C_master extends CI_Controller {
 	{
 		# code...
 	}
+
+	public function data($value='')
+	{
+		# code...
+	}
  
 
 }

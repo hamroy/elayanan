@@ -49,6 +49,27 @@
           </select>
         </td>
       </tr>
+      <tr>
+        <td colspan="2"><b>Pangkat :</b></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <select name="pangkat" id="pangkat" class="form-control">
+            <option value=""></option>
+            <?php
+            $sql_row=$this->M_master->getPangkat();
+            foreach ($sql_row->result_array() as $sql_res)
+            {
+              $k_id           = $sql_res['id'];
+              $k_opis         = $sql_res['nm_pangkat'];
+            ?>
+            <option value="<?php echo $k_id ?>" <?php if ($k_id == $r['id_pangkat']){ echo 'selected'; } ?> ><?php echo $sql_res["nm_pangkat"]; ?></option>
+                  <?php
+                    }
+                  ?>
+          </select>
+        </td>
+      </tr>
     </table>
 
 <br>

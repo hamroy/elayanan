@@ -62,13 +62,13 @@
                                                   <td><font size=""><?php echo $tampil['idj']?></font></td>
                                                   <td><font size=""><?php echo $tampil['nmj']?></font></td>
                                                   <td>
-                                                    <a href="#" class='open_modal' id='<?php echo  $tampil['idj']; ?>'><i class="fas fa-edit"> Edit</i></a>            
+                                                    <a href="#" class='open_modal' id='<?php echo  $tampil['idj']; ?>'><i class="fa fa-edit"> Edit</i></a>            
                                                     <?php
                                                     $akses=$this->session->userdata('lvl_akses');
                                                     if ($akses==1) {
                                                         ?>
                                                         <a href="#" 
-                                                    onclick="confirm_modal('<?=base_url()?>C_master/jabatanDel?&modal_id=<?=$tampil['idj']?>');"><i class="far fa-times-circle"> Hapus</i></a>
+                                                    onclick="confirm_modal('<?=base_url()?>C_master/jabatanDel?&modal_id=<?=$tampil['idj']?>');"><i class="fa fa-times-circle"> Hapus</i></a>
                                                         <?php
                                                     }
                                                     ?>

@@ -2,9 +2,7 @@
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <?php $isi=empty($isi)?"isi":$isi;
-            $this->load->view($isi);
-            ?>
+            <h1>SELAMAT DATANG DI SISTEM ELAYANAN </h1>
 
           </div>
         </div>

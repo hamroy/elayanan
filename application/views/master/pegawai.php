@@ -29,7 +29,7 @@
                               ?>
                                 <table class="table table-striped table-bordered">
                                     <tr>    
-                                            <th colspan="4">
+                                            <th colspan="5">
                                                 <div class="row">
                                                   <div class="col-md-8">
                                                       <form method="get">
@@ -52,25 +52,28 @@
                                           <tr>
                                         <th  style="background-color: gainsboro;"><font>NIP</font></th>
                                         <th  style="background-color: gainsboro;"><font>NAMA</font></th>
+                                        <th  style="background-color: gainsboro;"><font>PANGKAT</font></th>
                                         <th  style="background-color: gainsboro;"><font>JABATAN</font></th>
                                         </th><th width="16%" style="background-color: gainsboro;"><font>Menu</font></th>
                                           </tr>
 
                                           <?php 
                                             foreach ($sql->result_array() as $tampil){
+                                              $tm_cariP=$this->M_master->getPangkatId($tampil['id_pangkat'])->row_array();
                                              ?> 
                                                 <tr>
                                                   <td><font size=""><?php echo $tampil['nip']?></font></td>
                                                   <td><font size=""><?php echo $tampil['nama']?></font></td>
+                                                  <td><font size=""><?php echo $tm_cariP['nm_pangkat']?></font></td>
                                                   <td><font size=""><?php echo $tampil['nama_jabatan']?></font></td>
                                                   <td>
-                                                    <a href="#" class='open_modal' id='<?php echo  $tampil['id']; ?>'><i class="fas fa-edit"> Edit</i></a>            
+                                                    <a href="#" class='open_modal' id='<?php echo  $tampil['id']; ?>'><i class="fa fa-edit"> Edit</i></a>            
                                                     <?php
                                                     $akses=$this->session->userdata('lvl_akses');
                                                     if ($akses==1) {
                                                         ?>
                                                         <a href="#" 
-                                                    onclick="confirm_modal('<?=base_url()?>C_master/pegawaiDel?&modal_id=<?=$tampil['id']?>');"><i class="far fa-times-circle"> Hapus</i></a>
+                                                    onclick="confirm_modal('<?=base_url()?>C_master/pegawaiDel?&modal_id=<?=$tampil['id']?>');"><i class="fa fa-times-circle"> Hapus</i></a>
                                                         <?php
                                                     }
                                                     ?>
@@ -122,6 +125,26 @@
                       {
             ?>
             <option value="<?php echo $sql_res["idj"]; ?>"><?php echo $sql_res["nmj"]; ?></option>
+                  <?php
+                    }
+                  ?>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2"><b>Pangkat :</b></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <select name="pangkat" id="pangkat" class="form-control">
+            <option value=""></option>
+            <?php
+            $sql_row=$this->M_master->getPangkat();
+            foreach ($sql_row->result_array() as $sql_res)
+              {
+            ?>
+            <option value="<?php echo $sql_res["id"]; ?>"><?php echo $sql_res["nm_pangkat"]; ?></option>
                   <?php
                     }
                   ?>

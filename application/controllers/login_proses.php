@@ -15,6 +15,7 @@ class login_proses extends CI_Controller {
  
 			$data_session = array(
 				'nama' => $username,
+				'lvl_akses' => 1, //1 = admin
 				'status' => "login",
 				'login' => true 
 				);

@@ -64,13 +64,13 @@
                                                   <td><font size=""><?php echo $tampil['nm_klasifikasi']?></font></td>
                                                   <td><font size=""><?php echo $tampil['keterangan']?></font></td>
                                                   <td>
-                                                    <a href="#" class='open_modal' id='<?php echo  $tampil['id']; ?>'><i class="fas fa-edit"> Edit</i></a>            
+                                                    <a href="#" class='open_modal' id='<?php echo  $tampil['id']; ?>'><i class="fa fa-edit"> Edit</i></a>            
                                                     <?php
                                                     $akses=$this->session->userdata('lvl_akses');
                                                     if ($akses==1) {
                                                         ?>
                                                         <a href="#" 
-                                                    onclick="confirm_modal('C_master/klasifikasidel?&modal_id=<?=$tampil['id']?>');"><i class="far fa-times-circle"> Hapus</i></a>
+                                                    onclick="confirm_modal('C_master/klasifikasidel?&modal_id=<?=$tampil['id']?>');"><i class="fa fa-times-circle"> Hapus</i></a>
                                                         <?php
                                                     }
                                                     ?>
@@ -182,7 +182,7 @@
    $(".open_modal").click(function(e) {
       var m = $(this).attr("id");
        $.ajax({
-             url: "C_master/klasifikasiEdit",
+             url: "<?=base_url()?>C_master/klasifikasiEdit",
              type: "GET",
              data : {modal_id: m,},
              success: function (ajaxData){

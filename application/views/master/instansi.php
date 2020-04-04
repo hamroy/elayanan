@@ -62,9 +62,9 @@
                                                   <td><font size=""><?php echo $tampil['kd_instansi']?></font></td>
                                                   <td><font size=""><?php echo $tampil['nm_instansi']?></font></td>
                                                   <td>
-                                                    <a href="#" class='open_modal' id='<?php echo  $tampil['kd_instansi']; ?>'><i class="fas fa-edit"> Edit</i></a>            
+                                                    <a href="#" class='open_modal' id='<?php echo  $tampil['kd_instansi']; ?>'><i class="fa fa-edit"> Edit</i></a>            
                                                     <a href="#" 
-                                                    onclick="confirm_modal('<?=base_url()?>C_master/instansiDel?&modal_id=<?=$tampil['kd_instansi']?>');"><i class="far fa-times-circle"> Hapus</i></a>
+                                                    onclick="confirm_modal('<?=base_url()?>C_master/instansiDel?&modal_id=<?=$tampil['kd_instansi']?>');"><i class="fa fa-times-circle"> Hapus</i></a>
                                                   </td>
                                                 </tr>
                                              <?php

@@ -43,6 +43,11 @@ class M_master extends CI_model
 		$cari = "SELECT idj, nmj FROM tbjabatan Where nmj like '%$nama%' order by idj desc";
 		return $this->db->query($cari);
 	}
+	public function getPangkat($nama='')
+	{
+		$cari = "SELECT * FROM tbpangkat Where nm_pangkat like '%$nama%' order by id desc";
+		return $this->db->query($cari);
+	}
 	public function getPegawai($nama='')
 	{
 		$cari = "SELECT nip,nama,nama_jabatan,kd_jk,idj,id_pangkat,kd_pendidikan,id FROM tbpegawai Where nama like '%$nama%' and kd_instansi='BKPSDM'";
@@ -93,6 +98,11 @@ class M_master extends CI_model
 	public function getJabatanId($id='')
 	{
 		$cari = "SELECT idj, nmj FROM tbjabatan WHERE idj='$id'";
+		return $this->db->query($cari);
+	}
+	public function getPangkatId($id='')
+	{
+		$cari = "SELECT * FROM tbpangkat WHERE id='$id'";
 		return $this->db->query($cari);
 	}
 	public function getUserId($id='')
@@ -153,12 +163,13 @@ class M_master extends CI_model
 		$txtnip = $_POST['txtnip'];
 		$txtnm = $_POST['txtnm'];
 		$cbojabatan = $_POST['cbojabatan'];
+		$id_pangkat = $_POST['pangkat'];
 
 		$cari_kd=$this->getJabatanId($cbojabatan);
 		$tm_cari=$cari_kd->row_array();
 		$nmj = $tm_cari['nmj'];
 
-		$sql = "INSERT INTO tbpegawai (nip, nama, idj, nama_jabatan, kd_instansi,unit_kerja,sub_unit,kd_jk,pendidikan,id_kelas_jabatan,kelas_jabatan,idal,atasan_langsung,id_pangkat,kd_pendidikan ) VALUES ('$txtnip', '$txtnm', '$cbojabatan', '$nmj', 'BKPSDM','','',0,'','',0,'','',0,0)";
+		$sql = "INSERT INTO tbpegawai (nip, nama, idj, nama_jabatan, kd_instansi,unit_kerja,sub_unit,kd_jk,pendidikan,id_kelas_jabatan,kelas_jabatan,idal,atasan_langsung,id_pangkat,kd_pendidikan ) VALUES ('$txtnip', '$txtnm', '$cbojabatan', '$nmj', 'BKPSDM','','',0,'','',0,'','','$id_pangkat',0)";
 		$this->db->query($sql);
 	}
 	public function saveUser($id='')
@@ -235,12 +246,13 @@ class M_master extends CI_model
 		$txtid=$_POST['txtid'];
 		$txtnip=$_POST['txtnip'];
 		$txtnm = $_POST['txtnm'];
+		$id_pangkat = $_POST['pangkat'];
 		$cbojabatan = $_POST['cbojabatan'];
 
 		$cari_kd=$this->getJabatanId($cbojabatan);
 		$tm_cari=$cari_kd->row_array();
 		$nmj = $tm_cari['nmj'];
-		$sql = "UPDATE tbpegawai SET nip='$txtnip', nama='$txtnm', idj='$cbojabatan', nama_jabatan='$nmj' WHERE id = '$txtid'";
+		$sql = "UPDATE tbpegawai SET nip='$txtnip', nama='$txtnm', idj='$cbojabatan', nama_jabatan='$nmj',id_pangkat='$id_pangkat' WHERE id = '$txtid'";
 		$this->db->query($sql);
 	}
 	public function upUser($id='')

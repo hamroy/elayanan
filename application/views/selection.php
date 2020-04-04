@@ -2,9 +2,10 @@
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa fa-bars"></i> Pages</h3>
-            
-            <div class="jumbotron">SELAMAT DATANG DI SISTEM E-LAYANAN PEGAWAI</div>
+            <?php $isi;
+            $this->load->view($isi);
+            ?>
+
           </div>
         </div>
       </section>

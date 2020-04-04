@@ -9,16 +9,17 @@
   <title>E-Layanan Pegawai</title>
 
   <!-- Bootstrap CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?=base_url()?>css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
-  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link href="<?=base_url()?>css/bootstrap-theme.css" rel="stylesheet">
   <!--external css-->
   <!-- font icon -->
-  <link href="css/elegant-icons-style.css" rel="stylesheet" />
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="<?=base_url()?>css/elegant-icons-style.css" rel="stylesheet" />
+  <link href="<?=base_url()?>css/font-awesome.min.css" rel="stylesheet" />
   <!-- Custom styles -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/style-responsive.css" rel="stylesheet" />
+  <link href="<?=base_url()?>css/style.css" rel="stylesheet">
+  <link href="<?=base_url()?>css/style-responsive.css" rel="stylesheet" />
+  <script src="<?=base_url()?>js/jquery.js"></script>
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
   <!--[if lt IE 9]>

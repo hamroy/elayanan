@@ -56,10 +56,10 @@ class M_master extends CI_model
 	public function getUser($nama='')
 	{
 		$cari = "
-		SELECT tbuser.id_user, tbuser.id_peg, tbuser.nip, tbuser.pwd, tbuser.lvl_akses,  tbakses.nama_level
+		SELECT tbuser.id_user, tbuser.id_peg, tbuser.nip, tbuser.username, tbuser.pwd, tbuser.lvl_akses,  tbakses.nama_level
 		FROM tbuser,tbakses   
 		WHERE tbuser.lvl_akses=tbakses.id
-		and tbuser.nip like '%$nama%'
+		and tbuser.username like '%$nama%'
 		order by tbuser.lvl_akses";
 		return $this->db->query($cari);
 	}

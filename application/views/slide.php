@@ -4,9 +4,9 @@
         <ul class="sidebar-menu">
           <li class="active">
             <a class="" href="<?=base_url('welcome/beranda')?>">
-                          <i class="icon_house_alt"></i>
-                          <span>BERANDA</span>
-                      </a>
+              <i class="icon_house_alt"></i>
+              <span>BERANDA</span>
+            </a>
           </li>
 
           <li class="sub-menu ">
@@ -15,20 +15,18 @@
               <span>Master Data</span>
               <span class="menu-arrow arrow_carrot-right"></span>
             </a>
-  <ul class="sub">
+            <ul class="sub">
               <li><a class="" href="umtkerja.html">Umt Kerja</a></li>
               <li><a class="" href="jabatan.html"><span>Jabatan</span></a></li>
               <li><a class="" href="jfu.html"><span>JFU</span></a></li>
               <li><a class="active" href="jft.html">JFT</a></li>
-              
-            </ul>
-                      </a>
+            </ul>        
           </li>
           <li class="">
             <a class="" href="<?=base_url('welcome/Profil_Guru')?>">
-                          <i class="icon_house_alt"></i>
-                          <span>Data Pojok Aplikasi</span>
-                      </a>
+                <i class="icon_house_alt"></i>
+                  <span>Data Pojok Aplikasi</span>
+                </a>
           </li>
           <li class="">
             <a class="" href="<?=base_url('welcome/Profil_Anak')?>">

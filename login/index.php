@@ -23,7 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
-<body>
+<body >
 	
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/sampul.jpg');">
@@ -62,14 +62,7 @@
 
 					<div class="text-center w-full p-t-25 p-b-230">
 						<a href="#" class="txt1">
-							E-Layanan Pegawai 2020
-						</a>
-					</div>
-
-					<div class="text-center w-full">
-						<a class="txt1" href="#">
-							Create new account
-							<i class="fa fa-long-arrow-right"></i>						
+							&copy; 2020
 						</a>
 					</div>
 				</form>

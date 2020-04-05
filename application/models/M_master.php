@@ -189,7 +189,7 @@ class M_master extends CI_model
 			return 0;
 		}
 
-		$sql = "INSERT INTO tbuser (id_peg,username, pwd, lvl_akses, kd_instansi) VALUES ('$namapeg','$nama', '$pwd', '$lvl', 'BKPSDM')";
+		$sql = "INSERT INTO tbuser (id_peg,username, pwd, lvl_akses) VALUES ('$namapeg','$nama', '$pwd', '$lvl')";
 		$this->db->query($sql);
 		return 1;
 	}
@@ -264,7 +264,7 @@ class M_master extends CI_model
 		$nama = $_POST['nama'];
 		$pwd = $_POST['pwd'];
 		$lvl = $_POST['lvl'];
-		$sql = "UPDATE tbuser SET id_peg='$namapeg',nip='$nama', pwd='$pwd', lvl_akses='$lvl' WHERE id_user='$kode'";
+		$sql = "UPDATE tbuser SET id_peg='$namapeg',username='$nama', pwd='$pwd', lvl_akses='$lvl' WHERE id_user='$kode'";
 		$this->db->query($sql);
 	}
 		

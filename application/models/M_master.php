@@ -56,7 +56,7 @@ class M_master extends CI_model
 	public function getUser($nama='')
 	{
 		$cari = "
-		SELECT tbuser.id_user, tbuser.id_peg, tbuser.nip, tbuser.pwd, tbuser.lvl_akses,  tbakses.nama_level
+		SELECT tbuser.id_user, tbuser.id_peg, tbuser.nip, username, tbuser.pwd, tbuser.lvl_akses,  tbakses.nama_level
 		FROM tbuser,tbakses   
 		WHERE tbuser.lvl_akses=tbakses.id
 		and tbuser.nip like '%$nama%'
@@ -187,7 +187,7 @@ class M_master extends CI_model
 			return 0;
 		}
 
-		$sql = "INSERT INTO tbuser (id_peg,nip, pwd, lvl_akses, kd_instansi) VALUES ('$namapeg','$nama', '$pwd', '$lvl', 'BKPSDM')";
+		$sql = "INSERT INTO tbuser (id_peg,username, pwd, lvl_akses, kd_instansi) VALUES ('$namapeg','$nama', '$pwd', '$lvl', 'BKPSDM')";
 		$this->db->query($sql);
 		return 1;
 	}

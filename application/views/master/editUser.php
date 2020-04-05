@@ -42,7 +42,7 @@
       </tr>
     
       <tr>
-        <td><input type="text" name="nama" id="nama" class="form-control" required value="<?php echo $r['nip']; ?>" /></td>
+        <td><input type="text" name="nama" id="nama" class="form-control" required value="<?php echo $r['username']; ?>" /></td>
       </tr>
       <tr>
         <td>&nbsp;<b>Password :</b></td>

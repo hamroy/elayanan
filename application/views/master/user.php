@@ -69,13 +69,13 @@
                                                 <tr>
                                                   <td><font size=""><?php echo $no++?></font></td>
                                                   <td><font size=""><?php echo $nm_peg?></font></td>
-                                                  <td><font size=""><?php echo $tampil['nip']?></font></td>
+                                                  <td><font size=""><?php echo $tampil['username']?></font></td>
                                                   <td><font size=""><?php echo $tampil['pwd']?></font></td>
                                                   <td><font size=""><?php echo $tampil['nama_level']?></font></td>
                                                   <td>
-                                                    <a href="#" class='open_modal' id='<?php echo  $tampil['id_user']; ?>'><i class="fas fa-edit"> Edit</i></a>            
+                                                    <a href="#" class='open_modal' id='<?php echo  $tampil['id_user']; ?>'><i class="fa fa-edit"> Edit</i></a>            
                                                     <a href="#" 
-                                                    onclick="confirm_modal('<?=base_url()?>C_master/userDel?&modal_id=<?=$tampil['id_user']?>');"><i class="far fa-times-circle"> Hapus</i></a>
+                                                    onclick="confirm_modal('<?=base_url()?>C_master/userDel?&modal_id=<?=$tampil['id_user']?>');"><i class="fa fa-times-circle"> Hapus</i></a>
                                                   </td>
                                                 </tr>
                                              <?php

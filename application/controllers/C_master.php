@@ -78,13 +78,14 @@ class C_master extends CI_Controller {
 		$this->cloginAkses();
 		$d=[
 			'judul' => "Bidang/Unit",
-			'ma' => "selected", //menu
-			'isi' => "master/bidang",
+			'active2' => 'class="active"', //menu
+			'content' => "master/bidang",
 			'sql' => $this->M_master->getBidang($this->input->get('strnama')),
 
 		];
 
-		$this->load->view('beranda',$d);
+		//$this->load->view('beranda',$d);
+		$this->load->view('admin_page',$d);
 	}
 	public function kegiatan()
 	{
@@ -115,26 +116,30 @@ class C_master extends CI_Controller {
 	{
 		$d=[
 			'judul' => "Pegawai",
-			'ma' => "selected", //menu
-			'isi' => "master/pegawai",
-			'sql' => $this->M_master->getPegawai($this->input->get('strnama')),
+			'aktif1a' => 'class="active"', //menu
+			//'content' => "master/pegawai",
+			'content' => "master/pegawai_db2",
+			//'sql' => $this->M_master->getPegawai($this->input->get('strnama')),
+			'sql' => $this->M_master->getPegawai_db2($this->input->get('strnama')),
 
 		];
 
-		$this->load->view('beranda',$d);
+		//$this->load->view('beranda',$d);
+		$this->load->view('admin_page',$d);
 	}
 	public function user()
 	{
 		$this->cloginAkses();
 		$d=[
 			'judul' => "User",
-			'ma' => "selected", //menu
-			'isi' => "master/user",
+			'aktif3' => 'class="active"', //menu
+			'content' => "master/user",
 			'sql' => $this->M_master->getUser($this->input->get('strnama')),
 
 		];
 
-		$this->load->view('beranda',$d);
+		//$this->load->view('beranda',$d);
+		$this->load->view('admin_page',$d);
 	}
 
 
@@ -238,7 +243,8 @@ class C_master extends CI_Controller {
 		$d=[
 			'judul' => "Pegawai",
 		];
-		$this->load->view('master/editPegawai',$d);
+		//$this->load->view('master/editPegawai',$d);
+		$this->load->view('master/editPegawai_db2',$d);
 	}
 	public function userEdit($value='')
 	{

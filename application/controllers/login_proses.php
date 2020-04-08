@@ -22,7 +22,7 @@ class login_proses extends CI_Controller {
  
 			$this->session->set_userdata($data_session);
  
-			redirect(base_url("welcome"));
+			redirect('Admin');
  
 		}else{
 			redirect(base_url("welcome"));

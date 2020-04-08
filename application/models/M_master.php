@@ -7,8 +7,8 @@ class M_master extends CI_model
 	
 	function __construct()
 	{
-		# code...
 	}
+	
 
 	public function getKlasisifikasi($nama='')
 	{
@@ -53,6 +53,14 @@ class M_master extends CI_model
 		$cari = "SELECT nip,nama,nama_jabatan,kd_jk,idj,id_pangkat,kd_pendidikan,id FROM tbpegawai Where nama like '%$nama%' and kd_instansi='BKPSDM'";
 		return $this->db->query($cari);
 	}
+	public function getPegawai_db2($nama='')
+	{
+		$db2 = $this->load->database('db2', TRUE);
+
+		$cari = "SELECT NIP,Nama_Pegawai,Jabatan,Pangkat,Pendidikan,id_pegawai FROM pegawai Where Nama_Pegawai like '%$nama%' and id_opd=1";
+		return $db2->query($cari);
+	}
+
 	public function getUser($nama='')
 	{
 		$cari = "
@@ -96,6 +104,13 @@ class M_master extends CI_model
 	{
 		$cari = "SELECT nip,nama,nama_jabatan,kd_jk,idj,id_pangkat,kd_pendidikan FROM tbpegawai WHERE id='$id'";
 		return $this->db->query($cari);
+	}
+	public function getPegawaiId_db2($id='')
+	{
+		$db2 = $this->load->database('db2', TRUE);
+		
+		$cari = "SELECT NIP,Nama_Pegawai,Jabatan,Pangkat,Pendidikan FROM pegawai WHERE id_pegawai='$id'";
+		return $db2->query($cari);
 	}
 	public function getJabatanId($id='')
 	{

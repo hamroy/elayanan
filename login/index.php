@@ -28,7 +28,7 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/sampul.jpg');">
 			<div class="wrap-login100 p-t-190 p-b-30">
-				<form class="login100-form validate-form" method="post" action="../login_proses">
+				<form class="login100-form validate-form" method="post" action="../Login_proses">
 
 					<div class="login100-form-avatar">
 						<img src="images/login1.jpg" alt="">

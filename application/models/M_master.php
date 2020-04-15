@@ -189,6 +189,23 @@ class M_master extends CI_model
 		$sql = "INSERT INTO tbpegawai (nip, nama, idj, nama_jabatan, kd_instansi,unit_kerja,sub_unit,kd_jk,pendidikan,id_kelas_jabatan,kelas_jabatan,idal,atasan_langsung,id_pangkat,kd_pendidikan ) VALUES ('$txtnip', '$txtnm', '$cbojabatan', '$nmj', 'BKPSDM','','',0,'','',0,'','','$id_pangkat',0)";
 		$this->db->query($sql);
 	}
+	public function savePegawai_db2($id='')
+	{
+		$db2 = $this->load->database('db2', TRUE);
+
+		$txtnip = $_POST['txtnip'];
+		$txtnm = $_POST['txtnm'];
+		$cbojabatan = $_POST['cbojabatan'];
+		$id_pangkat = $_POST['pangkat'];
+
+		$cari_kd=$this->getJabatanId($cbojabatan);
+		$tm_cari=$cari_kd->row_array();
+		$nmj = $tm_cari['nmj'];
+
+		$sql = "INSERT INTO pegawai (NIP, Nama_Pegawai, Jabatan, id_opd,Pendidikan,Pangkat ) VALUES ('$txtnip', '$txtnm', '$cbojabatan',1,'', '$id_pangkat')";
+		$db2->query($sql);
+	}
+
 	public function saveUser($id='')
 	{
 		$namapeg = $_POST['namapeg'];

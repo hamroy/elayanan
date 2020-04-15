@@ -101,7 +101,7 @@
         </div>
 
         <div class="modal-body">
-          <form action="<?=base_url()?>C_master/pegawai_save" name="modal_popup" enctype="multipart/form-data" method="POST">
+          <form action="<?=base_url()?>C_master/pegawai_save_db2" name="modal_popup" enctype="multipart/form-data" method="POST">
 
     <table class="table1" width="100%">
       <tr>
@@ -118,7 +118,7 @@
       <tr>
         <td colspan="2">
           <select name="cbojabatan" id="cbojabatan" class="form-control">
-            <option value=""></option>
+            <option value="">-- Silahkan pilih --</option>
             <?php
                     $sql_row=$this->M_master->getJabatan();
                     foreach ($sql_row->result_array() as $sql_res)
@@ -138,7 +138,7 @@
       <tr>
         <td colspan="2">
           <select name="pangkat" id="pangkat" class="form-control">
-            <option value=""></option>
+            <option value="">-- Silahkan pilih --</option>
             <?php
             $sql_row=$this->M_master->getPangkat();
             foreach ($sql_row->result_array() as $sql_res)
@@ -210,7 +210,7 @@
 <script type="text/javascript">
    $(document).ready(function () {
    $(".open_modal").click(function(e) {
-      var m = $(this).attr("id_pegawai");
+      var m = $(this).attr("id");
        $.ajax({
              url: "<?=base_url()?>C_master/pegawaiEdit",
              type: "GET",

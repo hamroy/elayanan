@@ -117,6 +117,8 @@ class C_master extends CI_Controller {
 		$d=[
 			'judul' => "Pegawai",
 			'aktif1a' => 'class="active"', //menu
+			'css' => 'master/css/pegawai', //menu
+			'js' => 'master/js/pegawai', //menu
 			//'content' => "master/pegawai",
 			'content' => "master/pegawai_db2",
 			//'sql' => $this->M_master->getPegawai($this->input->get('strnama')),
@@ -187,6 +189,13 @@ class C_master extends CI_Controller {
 	public function pegawai_save($value='')
 	{
 		$this->M_master->savePegawai();
+		$this->session->set_flashdata('pesan','Data berhasil disimpan');
+		redirect('C_master/pegawai');
+	}
+
+	public function pegawai_save_db2($value='')
+	{
+		$this->M_master->savePegawai_db2();
 		$this->session->set_flashdata('pesan','Data berhasil disimpan');
 		redirect('C_master/pegawai');
 	}

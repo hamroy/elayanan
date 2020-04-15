@@ -103,7 +103,7 @@ $aktif4 = empty($aktif4)? '': $aktif4;
             <!-- Footer -->
             <div class="legal">
                 <div class="copyright">
-                    &copy; 2020 &middot; DIKPORA &middot; PEMKAB NATUNA
+                    &copy; 2020 &middot; DISDIK &middot; PEMKAB NATUNA
                 </div>
                 <div class="version">
                     <b>Version: </b> <?=$this->Minfo->show()->row()->versi_aplikasi?>

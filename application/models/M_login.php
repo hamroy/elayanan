@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class m_login extends CI_Model {
+class M_login extends CI_Model {
     //mengecek ke database yang kita kirim ke parameter ke databasen
     public function cek_login($username,$password){
         $this->db->where('username', $username); // Untuk menambahkan Where Clause : username='$username'

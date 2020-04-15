@@ -11,29 +11,8 @@
     <!-- Waves Effect Plugin Js -->
     <script src="<?=base_url()?>plugins/node-waves/waves.js"></script>
 
-    <!-- Jquery CountTo Plugin Js -->
-    <script src="<?=base_url()?>plugins/jquery-countto/jquery.countTo.js"></script>
 
-    <!-- Morris Plugin Js -->
-    <script src="<?=base_url()?>plugins/raphael/raphael.min.js"></script>
-    <script src="<?=base_url()?>plugins/morrisjs/morris.js"></script>
-
-    <!-- ChartJs -->
-    <script src="<?=base_url()?>plugins/chartjs/Chart.bundle.js"></script>
-
-    <!-- Flot Charts Plugin Js -->
-    <script src="<?=base_url()?>plugins/flot-charts/jquery.flot.js"></script>
-    <script src="<?=base_url()?>plugins/flot-charts/jquery.flot.resize.js"></script>
-    <script src="<?=base_url()?>plugins/flot-charts/jquery.flot.pie.js"></script>
-    <script src="<?=base_url()?>plugins/flot-charts/jquery.flot.categories.js"></script>
-    <script src="<?=base_url()?>plugins/flot-charts/jquery.flot.time.js"></script>
-
-    <!-- Sparkline Chart Plugin Js -->
-    <script src="<?=base_url()?>plugins/jquery-sparkline/jquery.sparkline.js"></script>
-
-    <!-- Custom Js -->
-    <script src="<?=base_url()?>js/admin.js"></script>
-    <script src="<?=base_url()?>js/pages/index.js"></script>
+    <?php $this->load->view($js)?>
 
     <!-- Demo Js -->
     <script src="<?=base_url()?>js/demo.js"></script>

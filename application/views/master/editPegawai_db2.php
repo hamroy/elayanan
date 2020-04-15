@@ -25,9 +25,9 @@
       <tr>
         <td width="30%">
           <input type="hidden" name="txtid"  class="form-control" value="<?php echo $id; ?>" />       
-          <input type="text" name="txtnip"  class="form-control" value="<?php echo $r['nip']; ?>" />
+          <input type="text" name="txtnip"  class="form-control" value="<?php echo $r['NIP']; ?>" />
         </td>
-        <td width="70%"><input type="text" name="txtnm"  class="form-control" value="<?php echo $r['nama']; ?>" /></td>
+        <td width="70%"><input type="text" name="txtnm"  class="form-control" value="<?php echo $r['Nama_Pegawai']; ?>" /></td>
       </tr>
       <tr>
         <td colspan="2"><b>Jabatan :</b></td>
@@ -35,7 +35,7 @@
       <tr>
         <td colspan="2">
                         <select name="cbojabatan" id="cbojabatan" class="form-control">
-            <option value=0></option>
+            <option value="">-- Silahkan pilih --</option>
             <?php
               $sql_row=$this->M_master->getJabatan();
               foreach ($sql_row->result_array() as $sql_res)

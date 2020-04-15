@@ -20,6 +20,8 @@ class Admin extends CI_Controller {
 	{
 		if($this->session->userdata('login') == TRUE){
 
+			$data['css'] = 'master/css/beranda';
+			$data['js'] = 'master/js/beranda';
 			$data['content'] = 'admin/beranda';
 			$data['aktif2'] = $data['aktif3'] = $data['aktif4'] = '';
 			$data['aktif1'] = 'class="active"';

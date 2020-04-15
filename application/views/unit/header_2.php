@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Selamat Datang | Aplikasi Indeks Profesional Pegawai (IPP) - BKPP | PEMKAB NATUNA</title>
+    <title>Selamat Datang di Aplikasi Indeks Profesional Pegawai (IPP) | BKPP - PEMKAB NATUNA</title>
     <!-- Favicon-->
     <link rel="icon" href="<?=base_url()?>favicon.ico" type="image/x-icon">
 
@@ -22,15 +21,17 @@
     <!-- Animation Css -->
     <link href="<?=base_url()?>plugins/animate-css/animate.css" rel="stylesheet" />
 
-    <?php $this->load->view($css)?>
+    <!-- Sweet Alert Css -->
+    <link href="<?=base_url()?>plugins/sweetalert/sweetalert.css" rel="stylesheet" />
 
     <!-- Custom Css -->
     <link href="<?=base_url()?>css/style.css" rel="stylesheet">
 
+    <!-- Bootstrap Material Datetime Picker Css -->
+    <link href="<?=base_url()?>plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+    <!-- Bootstrap DatePicker Css -->
+    <link href="<?=base_url()?>plugins/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" />
+
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="<?=base_url()?>css/themes/all-themes.css" rel="stylesheet" />
-
-    <!-- Jquery Core Js -->
-    <script src="<?=base_url()?>plugins/jquery/jquery.min.js"></script>
-
 </head>
